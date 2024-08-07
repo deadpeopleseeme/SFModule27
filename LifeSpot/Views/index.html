@@ -7,35 +7,49 @@
     <title>LifeSpot</title>
     <style>
         /* Свойства стиля элемента. Подробнее о них в модуле по CSS */
-        .bordered {
-            border: 2px solid black;
-            background-color: azure;
-            padding: 10px;
-        }
-
         .video-container {
             display: inline-block;
+            
         }
 
         header {
-            background-color: lightcyan;
-            padding: 20px;
-            text-align: center;
             font-size: 26px;
             font-weight: bold;
+        }
+
+        body {
+            padding-left: 9%;
+        }
+
+        aside {
+            height: 200%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
+            width: 8%;
+            position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+            z-index: 1; /* Сайд-бар будет поверх остальных элементов */
+            top: 0; /* Сайдбар будет в самой верхней части страницы */
+            left: 0;
+            background-color: #111; /* Черный цвет фона (задан в виде кода) */
+            overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+            padding-top: 20px;
+        }
+
+        .navbar {
+            color: darkgray;
+            padding-left: 10%;
+            font-size: 17px;
         }
 
         footer {
             position: absolute;
             bottom: 0;
+            left: 86%;
             font-size: 12px;
         }
     </style>
 </head>
 <header>
-    ЛУЧШАЯ ШАПКА НА ПЛАНЕТЕ ШАПОК
     <!--Заголовок страницы-->
-    <h3>LifeSpot - прямые трансляции с улиц</h3>
+    <h1>LifeSpot - прямые трансляции с улиц</h1>
     <!--Параграф-->
     <p>Покажем, что происходит прямо сейчас</p>
 </header>
@@ -43,21 +57,28 @@
     <div class="bordered">
 
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="374" height="210" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3 class="video-title">Нью-Йорк, Брайант Парк</h3>
 
         </div>
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/z7SiAaN4ogw?si=lGS1m0vsqJFUbmzD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="374" height="210" src="https://www.youtube.com/embed/z7SiAaN4ogw?si=lGS1m0vsqJFUbmzD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3 class="video-title">Камера с разными городами мира</h3>
 
         </div>
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="374" height="210" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3 class="video-title">Лондон, автобусный маршрут</h3>
 
         </div>
     </div>
+    <!--Сайд-бар страницы-->
+    <aside id="sidebar">
+        <div class="navbar">
+            <p>Все трансляции</p>
+            <p>О проекте</p>
+        </div>
+    </aside>
 </body>
 <footer>
     <p>Валян - все права защищены (но это не точно)</p>
